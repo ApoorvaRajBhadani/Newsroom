@@ -3,15 +3,15 @@
     xmlns:tools="http://schemas.android.com/tools"
     tools:showIn="navigation_view">
 
-    <group android:checkableBehavior="single">
+
         <item
-            android:id="@+id/nav_share"
+            android:id="@+id/nav_settings"
             android:icon="@drawable/ic_menu_manage"
             android:title="@string/nav_drawer_settings" />
         <item
-            android:id="@+id/nav_send"
+            android:id="@+id/nav_helpnfeedback"
             android:icon="@drawable/ic_menu_send"
             android:title="@string/nav_drawer_helpnfeedback" />
-    </group>
+
 
 </menu>

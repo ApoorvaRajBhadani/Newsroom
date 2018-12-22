@@ -1,6 +1,9 @@
 package com.woc.apoorva.newsroom;
 
+import android.app.FragmentTransaction;
 import android.os.Bundle;
+import android.support.annotation.NonNull;
+import android.support.design.widget.BottomNavigationView;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
 import android.view.View;
@@ -17,6 +20,8 @@ import android.widget.Toast;
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
 
+    private BottomNavigationView mBottomNavigationView;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -32,6 +37,51 @@ public class MainActivity extends AppCompatActivity
 
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
+
+        setupBottomNavigation();
+
+        if (savedInstanceState == null) {
+
+            loadFeedFragment();
+        }
+    }
+
+
+    private void setupBottomNavigation() {
+
+        mBottomNavigationView = (BottomNavigationView) findViewById(R.id.bottom_navigation);
+
+        mBottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
+            @Override
+            public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+
+                switch (item.getItemId()) {
+                    case R.id.action_feed:
+                        loadFeedFragment();
+                        return true;
+                    case R.id.action_clubs:
+                        loadClubsFragment();
+                        return true;
+                }
+                return false;
+            }
+        });
+    }
+
+    private void loadFeedFragment() {
+
+        FeedFragment fragment = FeedFragment.newInstance();
+        FragmentTransaction ft = getFragmentManager().beginTransaction();
+        ft.replace(R.id.fragment_frame, fragment);
+        ft.commit();
+    }
+
+    private void loadClubsFragment() {
+
+        ClubsFragment fragment = ClubsFragment.newInstance();
+        FragmentTransaction ft = getFragmentManager().beginTransaction();
+        ft.replace(R.id.fragment_frame, fragment);
+        ft.commit();
     }
 
     @Override

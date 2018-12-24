@@ -1,6 +1,7 @@
 package com.woc.apoorva.newsroom;
 
 import android.app.FragmentTransaction;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.design.widget.BottomNavigationView;
@@ -124,7 +125,8 @@ public class MainActivity extends AppCompatActivity
 
         if (id == R.id.nav_settings) {
             // Handle the action
-            Toast.makeText(this,"Testing...Settings tapped",Toast.LENGTH_SHORT).show();
+            Intent intent = new Intent(this,SettingsActivity.class);
+            startActivity(intent);
         } else if (id == R.id.nav_helpnfeedback) {
             Toast.makeText(this,"Testing...HelpNFeedBack tapped",Toast.LENGTH_SHORT).show();
         }

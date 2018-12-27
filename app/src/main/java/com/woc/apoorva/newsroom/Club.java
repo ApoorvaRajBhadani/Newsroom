@@ -1,3 +1,5 @@
+package com.woc.apoorva.newsroom;
+
 public class Club {
     private int clubLogo;
     private String clubName;

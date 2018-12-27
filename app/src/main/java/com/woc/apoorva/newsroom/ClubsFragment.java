@@ -10,7 +10,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-public class ClubsFragment extends Fragment implements TabCult.OnFragmentInteractionListener,TabSports.OnFragmentInteractionListener,TabTech.OnFragmentInteractionListener {
+public class ClubsFragment extends Fragment {
 
     public static ClubsFragment newInstance() {
 
@@ -24,8 +24,5 @@ public class ClubsFragment extends Fragment implements TabCult.OnFragmentInterac
         return inflater.inflate(R.layout.fragment_clubs, container, false);
     }
 
-    @Override
-    public void onFragmentInteraction(Uri uri) {
 
-    }
 }

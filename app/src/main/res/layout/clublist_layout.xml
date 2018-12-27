@@ -19,6 +19,7 @@
             <ImageView
                 android:layout_width="75dp"
                 android:layout_height="75dp"
+                android:id="@+id/club_logo_cardimage"
                 tools:src="@mipmap/ic_launcher" />
 
             <LinearLayout
@@ -28,6 +29,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:id="@+id/club_name_cardtext"
                     tools:text="Club Name" />
 
             </LinearLayout>

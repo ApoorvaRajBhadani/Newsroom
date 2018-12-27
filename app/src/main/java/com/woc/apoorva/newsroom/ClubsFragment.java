@@ -34,7 +34,7 @@ public class ClubsFragment extends Fragment {
         clubList = new ArrayList<>();
         clubCardRecyclerView = (RecyclerView)view.findViewById(R.id.clubCardRecyclerView);
         clubCardRecyclerView.setHasFixedSize(true);
-        clubCardRecyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
+        clubCardRecyclerView.setLayoutManager(new LinearLayoutManager(this.getActivity()));
         clubList.add(
                 new Club(R.drawable.ic_launcher_background,"RoboISM")
         );
@@ -71,7 +71,7 @@ public class ClubsFragment extends Fragment {
         clubList.add(
                 new Club(R.drawable.ic_launcher_background,"LitC")
         );
-        adapter = new ClubCardAdapter(getContext(),clubList);
+        adapter = new ClubCardAdapter(this.getActivity(),clubList);
         clubCardRecyclerView.setAdapter(adapter);
         return view;
     }

@@ -22,10 +22,13 @@ public class ClubCardAdapter extends RecyclerView.Adapter<ClubCardAdapter.ClubCa
 
     @NonNull
     @Override
-    public ClubCardViewHolder onCreateViewHolder(@NonNull ViewGroup viewGroup, int i) {
-        LayoutInflater inflater = LayoutInflater.from(mCtx);
-        View view = inflater.inflate(R.layout.clublist_layout, null);
-        return new ClubCardViewHolder(view);
+    public ClubCardViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int i) {
+//        LayoutInflater inflater = LayoutInflater.from(mCtx);
+//        View view = inflater.inflate(R.layout.clublist_layout, null);
+//        return new ClubCardViewHolder(view);
+        View v= LayoutInflater.from(parent.getContext()).inflate(R.layout.clublist_layout,parent,false);
+
+        return new ClubCardViewHolder(v);
     }
 
 

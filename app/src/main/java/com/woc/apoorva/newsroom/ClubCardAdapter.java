@@ -37,7 +37,7 @@ public class ClubCardAdapter extends RecyclerView.Adapter<ClubCardAdapter.ClubCa
         Club club = clubList.get(position);
         holder.clubName.setText(club.getClubName());
         holder.clubLogo.setImageDrawable(mCtx.getResources().getDrawable(club.getClubLogo()));
-
+        holder.clubDetail.setText(club.getClubDetail());
     }
 
     @Override
@@ -49,12 +49,14 @@ public class ClubCardAdapter extends RecyclerView.Adapter<ClubCardAdapter.ClubCa
 
         TextView clubName;
         ImageView clubLogo;
+        TextView clubDetail;
 
         public ClubCardViewHolder(@NonNull View itemView) {
             super(itemView);
 
             clubLogo = itemView.findViewById(R.id.club_logo_cardimage);
             clubName = itemView.findViewById(R.id.club_name_cardtext);
+            clubDetail = itemView.findViewById(R.id.club_detail_cardtext);
         }
     }
 

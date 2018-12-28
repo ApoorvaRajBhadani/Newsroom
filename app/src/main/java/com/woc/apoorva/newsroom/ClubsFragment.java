@@ -36,40 +36,28 @@ public class ClubsFragment extends Fragment {
         clubCardRecyclerView.setHasFixedSize(true);
         clubCardRecyclerView.setLayoutManager(new LinearLayoutManager(this.getActivity()));
         clubList.add(
-                new Club(R.drawable.ic_launcher_background,"RoboISM")
+                new Club(R.drawable.ic_launcher_background,"RoboISM","Robots, Intelligent machines , drones and more")
         );
         clubList.add(
-                new Club(R.drawable.ic_launcher_background,"CyberLabs")
+                new Club(R.drawable.ic_launcher_background,"CyberLabs","Discover opportunities in numerous fields of computing")
         );
         clubList.add(
-                new Club(R.drawable.ic_launcher_background,"LITM")
+                new Club(R.drawable.ic_launcher_background,"LITM","Stage dance club of IIT-ISM")
         );
         clubList.add(
-                new Club(R.drawable.ic_launcher_background,"LitC")
+                new Club(R.drawable.ic_launcher_background,"LitC","Novels, debates , standup and more")
         );
         clubList.add(
-                new Club(R.drawable.ic_launcher_background,"RoboISM")
+                new Club(R.drawable.ic_launcher_background,"Mechismu","Racing is Religion")
         );
         clubList.add(
-                new Club(R.drawable.ic_launcher_background,"CyberLabs")
+                new Club(R.drawable.ic_launcher_background,"Squash","Indoor sports somewhat similar to tennis")
         );
         clubList.add(
-                new Club(R.drawable.ic_launcher_background,"LITM")
+                new Club(R.drawable.ic_launcher_background,"Table Tennis","ping pong ball bouncing on the table")
         );
         clubList.add(
-                new Club(R.drawable.ic_launcher_background,"LitC")
-        );
-        clubList.add(
-                new Club(R.drawable.ic_launcher_background,"RoboISM")
-        );
-        clubList.add(
-                new Club(R.drawable.ic_launcher_background,"CyberLabs")
-        );
-        clubList.add(
-                new Club(R.drawable.ic_launcher_background,"LITM")
-        );
-        clubList.add(
-                new Club(R.drawable.ic_launcher_background,"LitC")
+                new Club(R.drawable.ic_launcher_background,"Cricket club","From helicopter shots to centuries")
         );
         adapter = new ClubCardAdapter(this.getActivity(),clubList);
         clubCardRecyclerView.setAdapter(adapter);

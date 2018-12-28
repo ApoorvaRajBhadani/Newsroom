@@ -2,8 +2,8 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
     <item android:id="@+id/action_feed"
         android:title="@string/botnavview_feed"
-        android:icon="@drawable/ic_menu_manage" />
+        android:icon="@drawable/ic_menu_news" />
     <item android:id="@+id/action_clubs"
         android:title="@string/botnavview_clubs"
-        android:icon="@drawable/ic_menu_manage" />
+        android:icon="@drawable/ic_menu_club" />
 </menu>

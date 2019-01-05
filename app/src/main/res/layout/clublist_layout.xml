@@ -21,12 +21,6 @@
             android:orientation="horizontal"
             android:padding="8dp">
 
-            <!--<ImageView-->
-                <!--android:id="@+id/club_logo_cardimage"-->
-                <!--android:layout_width="80dp"-->
-                <!--android:layout_height="80dp"-->
-                <!--android:layout_centerVertical="true"-->
-                <!--tools:src="@mipmap/ic_launcher" />-->
             <de.hdodenhof.circleimageview.CircleImageView
                 android:id="@+id/club_logo_cardimage"
                 android:layout_width="80dp"

@@ -14,6 +14,15 @@ import java.util.List;
 public class ClubCardAdapter extends RecyclerView.Adapter<ClubCardAdapter.ClubCardViewHolder> {
     private Context mCtx;
     private List<Club> clubList;
+    private OnClubCardClickListener mListener;
+
+    public interface OnClubCardClickListener{
+        void onClubCardClick(int position);
+    }
+    //will be used for the interface created above
+    public void setOnClubCardClickListener(OnClubCardClickListener listener){
+        mListener = listener;
+    }
 
     public ClubCardAdapter(Context mCtx, List<Club> clubList){
         this.mCtx = mCtx;
@@ -23,11 +32,7 @@ public class ClubCardAdapter extends RecyclerView.Adapter<ClubCardAdapter.ClubCa
     @NonNull
     @Override
     public ClubCardViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int i) {
-//        LayoutInflater inflater = LayoutInflater.from(mCtx);
-//        View view = inflater.inflate(R.layout.clublist_layout, null);
-//        return new ClubCardViewHolder(view);
         View v= LayoutInflater.from(parent.getContext()).inflate(R.layout.clublist_layout,parent,false);
-
         return new ClubCardViewHolder(v);
     }
 
@@ -57,6 +62,18 @@ public class ClubCardAdapter extends RecyclerView.Adapter<ClubCardAdapter.ClubCa
             clubLogo = itemView.findViewById(R.id.club_logo_cardimage);
             clubName = itemView.findViewById(R.id.club_name_cardtext);
             clubDetail = itemView.findViewById(R.id.club_detail_cardtext);
+
+            itemView.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    if(mListener!=null){
+                        int position = getAdapterPosition();
+                        if(position!=RecyclerView.NO_POSITION){
+                            mListener.onClubCardClick(position);
+                        }
+                    }
+                }
+            });
         }
     }
 

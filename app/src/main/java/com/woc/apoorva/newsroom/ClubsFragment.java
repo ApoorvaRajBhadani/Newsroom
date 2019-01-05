@@ -1,6 +1,7 @@
 package com.woc.apoorva.newsroom;
 
 
+import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
 import android.app.Fragment;
@@ -15,7 +16,10 @@ import android.view.ViewGroup;
 import java.util.ArrayList;
 import java.util.List;
 
-public class ClubsFragment extends Fragment {
+public class ClubsFragment extends Fragment implements ClubCardAdapter.OnClubCardClickListener {
+
+    public static final String EXTRA_CLUB_NAME = "clubName";
+    public static final String EXTRA_CLUB_DETAIL = "clubDetail";
 
     RecyclerView clubCardRecyclerView;
     ClubCardAdapter adapter;
@@ -61,8 +65,19 @@ public class ClubsFragment extends Fragment {
         );
         adapter = new ClubCardAdapter(this.getActivity(),clubList);
         clubCardRecyclerView.setAdapter(adapter);
+        adapter.setOnClubCardClickListener(ClubsFragment.this);
         return view;
     }
 
 
+    @Override
+    public void onClubCardClick(int position) {
+        Intent pageIntent = new Intent(getContext(),ClubPage.class);
+        Club clickedClub = clubList.get(position);
+
+        pageIntent.putExtra(EXTRA_CLUB_NAME,clickedClub.getClubName());
+        pageIntent.putExtra(EXTRA_CLUB_DETAIL,clickedClub.getClubDetail());
+
+        startActivity(pageIntent);
+    }
 }

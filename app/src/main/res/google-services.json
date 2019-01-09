@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "5933075152",
+    "firebase_url": "https://newsroom-779c7.firebaseio.com",
+    "project_id": "newsroom-779c7",
+    "storage_bucket": "newsroom-779c7.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:5933075152:android:626a56ae5b01ac8c",
+        "android_client_info": {
+          "package_name": "com.woc.apoorva.newsroom"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "5933075152-q3lv5fv18ar93ne1ltis043fidrgerta.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBw6i_XyYI8sLXypm7MDnEvhKfMTVwPUjc"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -4,11 +4,27 @@ import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.widget.TextView;
+import android.widget.Toast;
+
+import com.android.volley.Request;
+import com.android.volley.RequestQueue;
+import com.android.volley.Response;
+import com.android.volley.VolleyError;
+import com.android.volley.toolbox.JsonObjectRequest;
+import com.android.volley.toolbox.Volley;
+
+import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
 
 import static com.woc.apoorva.newsroom.ClubsFragment.EXTRA_CLUB_DETAIL;
 import static com.woc.apoorva.newsroom.ClubsFragment.EXTRA_CLUB_NAME;
 
 public class ClubPage extends AppCompatActivity {
+
+    private RequestQueue mRequestQueue;
+    TextView clubFbFeedTextView;
+    String fin = "initial";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -24,5 +40,8 @@ public class ClubPage extends AppCompatActivity {
 
         clubNameTextView.setText(clubName);
         clubDetailTextView.setText(clubDetail);
+
+
     }
+
 }

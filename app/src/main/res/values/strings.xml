@@ -11,6 +11,8 @@
     <string name="botnavview_feed">Feed</string>
     <string name="botnavview_clubs">Clubs</string>
     <string name="title_activity_settings">Settings</string>
+    <string name="facebook_app_id">2538585002834979</string>
+    <string name="fb_login_protocol_scheme">fb2538585002834979</string>
 
     <!-- Strings related to Settings -->
 

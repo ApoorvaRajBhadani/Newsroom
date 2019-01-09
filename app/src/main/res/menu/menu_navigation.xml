@@ -7,6 +7,6 @@
         android:title="@string/botnavview_clubs"
         android:icon="@drawable/ic_menu_club" />
     <item android:id="@+id/action_profile"
-        android:title="@string/botnavview_clubs"
-        android:icon="@drawable/ic_menu_club" />
+        android:title="@string/botnavview_profile"
+        android:icon="@drawable/ic_menu_profile" />
 </menu>

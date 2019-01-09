@@ -67,6 +67,9 @@ public class MainActivity extends AppCompatActivity
                     case R.id.action_clubs:
                         loadClubsFragment();
                         return true;
+                    case R.id.action_profile:
+                        loadProfileFragment();
+                        return true;
                 }
                 return false;
             }
@@ -76,6 +79,13 @@ public class MainActivity extends AppCompatActivity
     private void loadFeedFragment() {
 
         FeedFragment fragment = FeedFragment.newInstance();
+        FragmentTransaction ft = getFragmentManager().beginTransaction();
+        ft.replace(R.id.fragment_frame, fragment);
+        ft.commit();
+    }
+    private void loadProfileFragment() {
+
+        ProfileFragment fragment = ProfileFragment.newInstance();
         FragmentTransaction ft = getFragmentManager().beginTransaction();
         ft.replace(R.id.fragment_frame, fragment);
         ft.commit();

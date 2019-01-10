@@ -20,6 +20,10 @@ public class ClubsFragment extends Fragment implements ClubCardAdapter.OnClubCar
 
     public static final String EXTRA_CLUB_NAME = "clubName";
     public static final String EXTRA_CLUB_DETAIL = "clubDetail";
+    public static final String EXTRA_CLUB_LONGDETAIL = "clubLongDetail";
+    public static final String EXTRA_CLUB_FBURL = "clubFBUrl";
+    public static final String EXTRA_CLUB_LOGO = "clubLogo";
+    public static final String EXTRA_CLUB_TYPE = "clubType";
 
     RecyclerView clubCardRecyclerView;
     ClubCardAdapter adapter;
@@ -74,6 +78,10 @@ public class ClubsFragment extends Fragment implements ClubCardAdapter.OnClubCar
 
         pageIntent.putExtra(EXTRA_CLUB_NAME,clickedClub.getClubName());
         pageIntent.putExtra(EXTRA_CLUB_DETAIL,clickedClub.getClubDetail());
+        pageIntent.putExtra(EXTRA_CLUB_LONGDETAIL,clickedClub.getClubLongDetail());
+        pageIntent.putExtra(EXTRA_CLUB_FBURL,clickedClub.getClubFbpageurl());
+        pageIntent.putExtra(EXTRA_CLUB_LOGO,clickedClub.getClubLogo());
+        pageIntent.putExtra(EXTRA_CLUB_TYPE,clickedClub.getClubType());
 
         startActivity(pageIntent);
     }

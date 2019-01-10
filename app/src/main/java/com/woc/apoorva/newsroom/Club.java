@@ -14,6 +14,18 @@ public class Club {
         this.clubType=clubType;
     }
 
+    public int getClubType() {
+        return clubType;
+    }
+
+    public String getClubLongDetail() {
+        return clubLongDetail;
+    }
+
+    public String getClubFbpageurl() {
+        return clubFbpageurl;
+    }
+
     public String getClubDetail() {
         return clubDetail;
     }

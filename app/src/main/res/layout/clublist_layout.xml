@@ -71,6 +71,7 @@
                     android:layout_alignParentRight="true"
                     android:layout_alignParentTop="true"
                     android:text="T\nY\nP\nE"
+                    android:id="@+id/club_type_cardtext"
                     android:layout_marginRight="8dp"
                     android:textSize="8sp"
                     android:textStyle="bold" />

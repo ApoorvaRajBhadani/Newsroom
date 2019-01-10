@@ -16,15 +16,16 @@ public class ClubCardAdapter extends RecyclerView.Adapter<ClubCardAdapter.ClubCa
     private List<Club> clubList;
     private OnClubCardClickListener mListener;
 
-    public interface OnClubCardClickListener{
+    public interface OnClubCardClickListener {
         void onClubCardClick(int position);
     }
+
     //will be used for the interface created above
-    public void setOnClubCardClickListener(OnClubCardClickListener listener){
+    public void setOnClubCardClickListener(OnClubCardClickListener listener) {
         mListener = listener;
     }
 
-    public ClubCardAdapter(Context mCtx, List<Club> clubList){
+    public ClubCardAdapter(Context mCtx, List<Club> clubList) {
         this.mCtx = mCtx;
         this.clubList = clubList;
     }
@@ -32,7 +33,7 @@ public class ClubCardAdapter extends RecyclerView.Adapter<ClubCardAdapter.ClubCa
     @NonNull
     @Override
     public ClubCardViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int i) {
-        View v= LayoutInflater.from(parent.getContext()).inflate(R.layout.clublist_layout,parent,false);
+        View v = LayoutInflater.from(parent.getContext()).inflate(R.layout.clublist_layout, parent, false);
         return new ClubCardViewHolder(v);
     }
 
@@ -43,6 +44,20 @@ public class ClubCardAdapter extends RecyclerView.Adapter<ClubCardAdapter.ClubCa
         holder.clubName.setText(club.getClubName());
         holder.clubLogo.setImageDrawable(mCtx.getResources().getDrawable(club.getClubLogo()));
         holder.clubDetail.setText(club.getClubDetail());
+        switch (club.getClubType()) {
+            case 0:
+                holder.clubType.setText("T\nE\nC\nH");
+                break;
+            case 1:
+                holder.clubType.setText("S\nP\nO\nR\nT");
+                holder.clubType.setTextSize(6);
+                break;
+            case 2:
+                holder.clubType.setText("C\nU\nL\nT");
+                break;
+            default:
+                break;
+        }
     }
 
     @Override
@@ -52,23 +67,25 @@ public class ClubCardAdapter extends RecyclerView.Adapter<ClubCardAdapter.ClubCa
 
     class ClubCardViewHolder extends RecyclerView.ViewHolder {
 
-        TextView clubName;
+        TextView clubName, clubType;
         ImageView clubLogo;
         TextView clubDetail;
+
 
         public ClubCardViewHolder(@NonNull View itemView) {
             super(itemView);
 
             clubLogo = itemView.findViewById(R.id.club_logo_cardimage);
             clubName = itemView.findViewById(R.id.club_name_cardtext);
+            clubType = itemView.findViewById(R.id.club_type_cardtext);
             clubDetail = itemView.findViewById(R.id.club_detail_cardtext);
 
             itemView.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
-                    if(mListener!=null){
+                    if (mListener != null) {
                         int position = getAdapterPosition();
-                        if(position!=RecyclerView.NO_POSITION){
+                        if (position != RecyclerView.NO_POSITION) {
                             mListener.onClubCardClick(position);
                         }
                     }

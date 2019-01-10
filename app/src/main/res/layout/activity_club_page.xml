@@ -39,6 +39,7 @@
                 android:layout_toEndOf="@+id/club_type_pagetext"
                 android:src="@drawable/fblogo" />
 
+
             <TextView
                 android:id="@+id/club_name_pagetext"
                 android:layout_width="wrap_content"

@@ -182,7 +182,12 @@ public class MainActivity extends AppCompatActivity
             Intent intent = new Intent(this,SettingsActivity.class);
             startActivity(intent);
         } else if (id == R.id.nav_helpnfeedback) {
-            Toast.makeText(this,"Testing...HelpNFeedBack tapped",Toast.LENGTH_SHORT).show();
+            Intent emailIntent = new Intent(Intent.ACTION_SENDTO, Uri.fromParts(
+                    "mailto","apoorva222g@gmail.com", null));
+            emailIntent.putExtra(Intent.EXTRA_SUBJECT, "Help or Feedback");
+            emailIntent.putExtra(Intent.EXTRA_TEXT, "Body");
+            startActivity(Intent.createChooser(emailIntent, "Send email..."));
+//            Toast.makeText(this,"Testing...HelpNFeedBack tapped",Toast.LENGTH_SHORT).show();
         }
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);

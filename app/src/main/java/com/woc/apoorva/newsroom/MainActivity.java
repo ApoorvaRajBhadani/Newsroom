@@ -19,6 +19,7 @@ import android.widget.Toast;
 
 import com.facebook.FacebookSdk;
 import com.facebook.appevents.AppEventsLogger;
+import com.google.firebase.auth.FirebaseUser;
 
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
@@ -125,6 +126,13 @@ public class MainActivity extends AppCompatActivity
 
         //noinspection SimplifiableIfStatement
         if (id == R.id.action_settings) {
+            return true;
+        }
+
+        if (id == R.id.action_signin) {
+            Intent myIntent = new Intent(MainActivity.this, SignupActivity.class);
+             //Optional parameters
+            MainActivity.this.startActivity(myIntent);
             return true;
         }
 

@@ -15,6 +15,14 @@
       },
       "oauth_client": [
         {
+          "client_id": "5933075152-fufdn262m5rv63gm9rit026n469t8oo8.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.woc.apoorva.newsroom",
+            "certificate_hash": "ed33729d191455c155cebe42a3f9a8725b3af928"
+          }
+        },
+        {
           "client_id": "5933075152-q3lv5fv18ar93ne1ltis043fidrgerta.apps.googleusercontent.com",
           "client_type": 3
         }
@@ -29,8 +37,13 @@
           "status": 1
         },
         "appinvite_service": {
-          "status": 1,
-          "other_platform_oauth_client": []
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "5933075152-q3lv5fv18ar93ne1ltis043fidrgerta.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
         },
         "ads_service": {
           "status": 2

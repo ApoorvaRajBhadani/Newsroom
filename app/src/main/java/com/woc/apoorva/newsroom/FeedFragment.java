@@ -32,7 +32,8 @@ public class FeedFragment extends Fragment {
         newsCardRecyclerView.setHasFixedSize(true);
         newsCardRecyclerView.setLayoutManager(new LinearLayoutManager(this.getActivity()));
 
-//        newsList.add(new News(R.drawable.ic_launcher_foreground,"IIT-ISM the best"));
+
+        newsList.add(new News(R.drawable.ic_launcher_foreground,"IIT-ISM the best"));
 
         adapter = new NewsCardAdapter(this.getActivity(),newsList);
         newsCardRecyclerView.setAdapter(adapter);

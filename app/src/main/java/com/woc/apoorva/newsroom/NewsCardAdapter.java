@@ -26,7 +26,7 @@ public class NewsCardAdapter extends RecyclerView.Adapter<NewsCardAdapter.NewsCa
 //        LayoutInflater inflater = LayoutInflater.from(mCtx);
 //        View view = inflater.inflate(R.layout.clublist_layout, null);
 //        return new ClubCardViewHolder(view);
-        View v= LayoutInflater.from(parent.getContext()).inflate(R.layout.clublist_layout,parent,false);
+        View v= LayoutInflater.from(parent.getContext()).inflate(R.layout.newslist_layout,parent,false);
 
         return new NewsCardViewHolder(v);
     }

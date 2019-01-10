@@ -6,7 +6,7 @@
     <string name="nav_header_subtitle">woc.cyberlabs.club</string>
     <string name="nav_header_desc">Navigation header</string>
     <string name="action_settings">Settings</string>
-    <string name="action_signin">Sign-In</string>
+    <string name="action_signup">Sign-Up</string>
     <string name="nav_drawer_settings">Settings</string>
     <string name="nav_drawer_helpnfeedback">Help and Feedback</string>
     <string name="botnavview_feed">Feed</string>

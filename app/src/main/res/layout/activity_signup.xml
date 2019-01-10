@@ -10,14 +10,16 @@
         android:id="@+id/password_signup_text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/email_signup_text"
         android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="172dp"
+        android:layout_marginTop="135dp"
         android:ems="10"
+        android:hint="password"
         android:inputType="textPassword" />
 
     <EditText
         android:id="@+id/email_signup_text"
+        android:hint="email"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
@@ -32,6 +34,6 @@
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginBottom="196dp"
+        android:layout_marginBottom="265dp"
         android:text="Sign up" />
 </RelativeLayout>

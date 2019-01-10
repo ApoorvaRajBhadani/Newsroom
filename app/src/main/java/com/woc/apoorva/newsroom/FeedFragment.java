@@ -34,7 +34,7 @@ public class FeedFragment extends Fragment {
     List<News> newsList;
     private RequestQueue mQueue;
     private final String url =
-            "https://graph.facebook.com/v3.2/me?fields=id%2Cname%2Cfeed%7Bmessage%7D&access_token=EAAkE1GFTfCMBAPycnsQQ0wOdMXFWue8O6QkIybMSrvuZAabE47sDAba8xhKV2ZBI0Rx4LDrQJUajaJ3UCeaZBVcOyy62LACmM2EVJwzjFeTgSLfAn7BZC9JIJ1GIwx9vZAWnm2i2NdrnhDQOIN3WsxkKlkmwauHXbVk9Y0oOTup5mbbNDAoQicWzZCNbuGWugvZAUrXOe876SGXpTmL5jVH";
+            "https://graph.facebook.com/v3.2/me?fields=feed%7Bmessage%7D&access_token=EAAkE1GFTfCMBAHSnikaEZBBdHEPKLsoHdz1mbwomZA3ZCCrYZBdtbYrDJZBQzp0iOcTIZC5mXbMP1DRGGyev0FnuWEuQlFNhEDqkbISGfwrE1Pdo7wU1RFIk0rEi5yABbvC72urRWK0zqwTeOq03TynZB6QZAp0AAWM5iQXKVhgTEK7lCSk6NRuRyNmY2xTjfiCOIGFhY5TJitPRqZCM660px";
     ArrayList<String> list = new ArrayList<String>();
 
     public static FeedFragment newInstance() {
@@ -56,7 +56,10 @@ public class FeedFragment extends Fragment {
                     @Override
                     public void onResponse(JSONObject response) {
                         try {
-
+                            if(response.has("error"))
+                            {
+                                Toast.makeText(getContext(),"token expired update it",Toast.LENGTH_SHORT).show();
+                            }
                             JSONObject jsonObject = response.getJSONObject("feed");
                             JSONArray jsonArray = jsonObject.getJSONArray("data");
 

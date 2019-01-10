@@ -5,10 +5,7 @@
     android:layout_height="match_parent"
     tools:context=".ProfileFragment">
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="Profile Fragment" />
+
 
     <com.facebook.login.widget.LoginButton
         android:id="@+id/fblogin_button"
@@ -18,5 +15,10 @@
         android:layout_marginTop="30dp"
         android:layout_marginBottom="30dp"
          />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/emailfetched_text"
+        android:text="Profile Fragment" />
 
 </FrameLayout>

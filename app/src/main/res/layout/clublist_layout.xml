@@ -28,6 +28,7 @@
                 android:layout_height="80dp"
                 android:layout_centerVertical="true"
                 tools:src="@mipmap/ic_launcher"
+                android:scaleType="centerCrop"
                 app:civ_border_width="1dp"
                 app:civ_border_color="#FF000000"/>
 
